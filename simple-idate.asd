@@ -4,7 +4,7 @@
   :version "0.1"
   :author "Marcus Pemer"
   :license "GPLv3"
-  :depends-on ("local-time" "parse-number" "str")
+  :depends-on ("parachute" "local-time" "parse-number" "str")
   :components ((:file "package")
                (:file "simple-idate"))
   :description "Description of your TDA system."

@@ -2,6 +2,7 @@
 
 (defpackage :simple-idate
   (:use :common-lisp :rutil)
+  (:import-from :parachute :define-test)
   (:import-from :parse-number :parse-integer)
   (:import-from :local-time
                 :timestamp-year
