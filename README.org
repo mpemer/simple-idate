@@ -1,0 +1,47 @@
+#+AUTHOR: Marcus Pemer
+#+EMAIL: marcus@pemer.com
+
+* Simple-IDate Library
+  :PROPERTIES:
+  :CUSTOM_ID: simple-idate-library
+  :END:
+
+  The Simple-IDate Library is a Common Lisp utility designed for handling integer-based date representations. It provides a simple yet effective way of converting between standard date formats and integer-based dates.
+
+** Features
+   - Convert date components (year, month, day) to an integer-based date representation.
+   - Parse and format integer-based dates for easy integration with other systems.
+   - Lightweight and easy to integrate into existing Common Lisp projects.
+
+** Installation
+   To use the Simple-IDate Library, clone this repository into your local Quicklisp local-projects directory:
+
+   #+BEGIN_SRC shell
+     git clone https://github.com/mpemer/simple-idate.git ~/quicklisp/local-projects/simple-idate
+   #+END_SRC
+
+** Usage
+   Once installed, you can load the library using Quicklisp:
+
+   #+BEGIN_SRC lisp
+     (ql:quickload :simple-idate)
+   #+END_SRC
+
+   Example of converting a date to an integer representation:
+
+   #+BEGIN_SRC lisp
+     (simple-idate:ints->idate 2023 3 14) ;; Returns an integer representation of 2023-03-14
+   #+END_SRC
+
+** Contributing
+   Contributions to extend functionality or improve efficiency are welcome. If you're interested in contributing, please fork the repository and submit a pull request.
+
+** License
+   This project is licensed under the GPL v3 License - see the LICENSE file for details.
+
+* Contact
+  :PROPERTIES:
+  :CUSTOM_ID: contact
+  :END:
+
+  For any inquiries, suggestions, or contributions, feel free to reach out to Marcus Pemer at [[mailto:marcus@pemer.com][marcus@pemer.com]].
