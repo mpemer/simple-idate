@@ -24,6 +24,7 @@
 ;;;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ;;;; -----------------------------------------------------------------------
 (defpackage :simple-idate/core/main
+  (:nicknames :simple-idate)
   (:use :common-lisp)
   (:import-from :parse-number :parse-integer)
   (:import-from :local-time
@@ -39,7 +40,7 @@
            :ints->idate))
 
 
-(in-package :simple-idate/core/main)
+(in-package :simple-idate)
 
 
 (defun ints->idate (y m d)
