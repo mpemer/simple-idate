@@ -39,7 +39,7 @@
   (:export :idate :date->idate :idate->date :idate->unix :idate-year :idate-month :idate-day
            :mm/dd/yyyy :yyyy-mm-dd :first-of-month :ints->idate
            :idate= :idate< :idate<= :idate> :idate>= :+1d :-1d :+1m
-           :ints->idate))
+           :ints->idate :idate->yyyy-mm-dd))
 
 (in-package :simple-idate)
 
@@ -111,6 +111,14 @@
       (mapcar #'parse-integer
               (str:split #\- s))
     (ints->idate y m d)))
+
+(defun idate->yyyy-mm-dd (idate)
+  "Converts an 8-digit integer YYYYMMDD into a formatted string 'YYYY-MM-DD'."
+  (let ((date-str (write-to-string idate)))  ;; Convert integer to string
+    (format nil "~a-~a-~a"
+            (subseq date-str 0 4)  ;; Extract YYYY
+            (subseq date-str 4 6)  ;; Extract MM
+            (subseq date-str 6 8)))) ;; Extract DD
 
 ;;; Macro to apply a timestamp comparison or operation to integer-based dates.
 (defmacro idateop (op a b)
